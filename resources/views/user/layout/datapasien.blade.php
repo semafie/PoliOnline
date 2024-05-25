@@ -302,7 +302,7 @@
         checkInput();
 </script>
 
-<script>s
+
 
 <script>
   function hitungUsia() {
