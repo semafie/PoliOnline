@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+.navbar {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 80px;
+    height: 80px;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #374987;
+}
+
+.navbar .logo span {
+    color: #ffff;
+}
+.navbar .links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.navbar .links li a {
+    cursor: pointer;
+    color: #ffff;
+    text-decoration: none;
+    padding: 6px 15px;
+}
+.navbar .links li a.active {
+    background-color: #f8fdff;
+    color: #1c4779;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .links li a:hover {
+    background-color: #ffff;
+    opacity: 60%;
+    color: #1c4779;
+    border-radius: 4px;
+}
+.navbar .btn .btn-login {
+    cursor: pointer;
+    background-color: #f8fdff;
+    border: 2px solid #fff;
+    padding: 4px;
+    width: 100px;
+    color: #1c4779;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .btn .btn-login:hover {
+    color: #fff;
+    background-color: #0aa9ff;
+    border-color: #0aa9ff;
+}
+.navbar .btn .btn-register {
+    cursor: pointer;
+    background-color: #f8fdff;
+    border: 2px solid #fff;
+    padding: 4px;
+    width: 100px;
+    margin-left: 8px;
+    color: #1c4779;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .btn .btn-register:hover {
+    color: #fff;
+    background-color: #0aa9ff;
+    border-color: #0aa9ff;
+}
+.icon {
+    position: absolute;
+    font-size: 2rem;
+    color: #1c4779;
+    cursor: pointer;
+    right: 30px;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media screen and (max-width: 1000px) {
+    .icon {
+        display: block;
+    }
+    #check:checked ~ .icon #menu-icon {
+        display: none;
+    }
+
+    .icon #close-icon {
+        display: none;
+    }
+    #check:checked ~ .icon #close-menu {
+        display: block;
+    }
+    .navbar .links {
+        position: absolute;
+        top: 75px;
+        right: 0;
+        text-align: end;
+        width: 100%;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
+    }
+    #check:checked ~ .navbar .links {
+    }
+    .navbar .links {
+        display: none;
+    }
+    .navbar .btn {
+        display: none;
+    }
+    .links li {
+        font-size: 1.2rem;
+        margin: 15px 20px;
+    }
+}
+/* Untuk layar dengan lebar antara 480px dan 767px (layar HP dan ukuran sedang) */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .navbar .links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .navbar .links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar .links li {
+        padding: 10px;
+    }
+
+    .navbar .links li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+
+    .navbar .btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navbar .btn button {
+        margin: 5px;
+    }
+}
+/* Untuk layar dengan lebar kurang dari 480px (layar HP) */
+@media screen and (max-width: 479px) {
+    .navbar .logo {
+        font-size: 1.3rem;
+    }
+    .icon {
+        right: 20px;
+    }
+    .navbar .links {
+        top: 70px;
+    }
+}

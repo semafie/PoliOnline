@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.judul_dashboard{
+    font-size: 30px;
+    font-weight: 700;
+    color: #769FCD;
+}
+
+.judul_dashboard span{
+    font-size: 30px;
+    font-weight: 700;
+    color: #B9D7EA;
+}
+
+.menu-item.active .menu-link{
+    background-color: #004ea7;
+}
+
+.title-nav-admin{
+    color: #587595;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.data_antrian{
+    padding: 30px;
+}
+
+.data_antrian .tambah_antrian{
+    margin: 10px 0 30px 20px ;
+    width: 100%;
+    
+}
+
+.data_antrian .button_tambah{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.data_antrian .panjang_modal{
+    width: 800px;
+}
+
+.data_antrian .input_plus_button{
+    width: 30%;
+}
+
+.data_antrian .dua_input{
+ display: flex;
+ gap: 20px;
+ margin-bottom: 5px;
+}
+
+.data_antrian .dua_input .input_setengah{
+    width: 50%;
+}
+
+.data_antrian .dua_input .input_setengah_awal{
+    width: calc(50% + 20px);
+}
+
+.data_antrian .pilih_pasien{
+    width: 20%;
+    margin: 0;
+}
+
+.data_antrian .dua_label{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.data_antrian .label_setengah{
+ width: 50%;
+}
+
+.data_antrian .input_ditengah{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.select_poli label{
+    width: 300px
+}
+.select_poli input{
+    width: 300px
+}
+
+.data_dokter .btn_tambah{
+    width: 14%;
+    margin: 10px 0 30px 20px;
+}
+
+.data_dokter .dua_label{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.data_dokter .dua_input{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.data_dokter .dua_label .label_setengah{
+    width: 50%;
+}
+
+.data_dokter .dua_input .input_setengah{
+    width: 50%;
+}
+    
+.data_dokter .dua_input .select_setengah{
+    width: 50%;
+}
+
+.data_pasien .tambah_pasien{
+    width: 14%;
+    margin: 10px 0 30px 20px;
+}
+
+.data_pasien .dua_label{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.data_pasien .dua_input{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.data_pasien .dua_label .label_setengah{
+    width: 50%;
+}
+
+.data_pasien .dua_input .input_setengah{
+    width: 50%;
+}
+
+.data_pasien .dua_input .select_setengah{
+    width: 50%;
+}
+
+.data_pasien .satu_input_ditengah {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.data_pasien .satu_input_ditengah label{
+    width: 50%;
+}
+.data_pasien .satu_input_ditengah input{
+    width: 50%;
+}
+
+.button_intable{
+    display: flex;
+    gap: 5px;
+}
+
+.data_antrian table{
+    /* margin: 0px; */
+
+}
+
+.status_antrian{
+    display: flex;
+    justify-content: center;
+    background-color: grey  ;
+    margin: 0;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.status_antrians{
+    display: flex;
+    justify-content: center;
+    background-color: grey  ;
+    margin: 0;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+}
+
+.status_antrians:hover{
+    background-color: #44ce80;
+    color: white;
+}
+
+.nama_navbar{
+    margin-top: 16px;
+    font-size: 20px;
+}
+
+.button_caridokter {
+    margin-bottom: 20px;
+}
+
+.data_dokter .dua_input select{
+    width: 50%;
+}

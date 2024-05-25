@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+img{
+    object-fit: cover;
+}
+
+body{
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+.dashboard_user{
+    display: flex;
+    margin: 30px 30px 0 30px;
+}
+
+.dashboard_user .sidebar {
+    background: linear-gradient(to right, #ADEAFF, #2FCAFF);
+    min-width: 300px;
+    
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.dashboard_user .sidebar .logos{
+    text-align: center;
+    font-weight: 700;
+    color: #2F6FB8;
+    margin: 10px 0 30px 0;
+}
+
+.dashboard_user .sidebar .logos span{
+    color: #68889C;
+}
+
+.dashboard_user .sidebar .garis{
+    height: 2px ;
+    background-color: white;
+}
+
+.dashboard_user .sidebar .menus{
+    margin: 20px 0;
+    padding: 0px 5px ;
+}
+
+.dashboard_user .sidebar .menus a{
+    margin: 0px ;
+    display: flex;
+    align-items: center;
+    padding: 13px 7px;
+    border-radius: 5px;
+    color: #ffffff; 
+    font-size: 22px;
+    font-weight: 600;
+}
+
+
+
+.dashboard_user .sidebar .menus a:not(:last-child){
+    margin-bottom: 5px;
+}
+
+.dashboard_user .sidebar .menus a:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.dashboard_user .sidebar .menus a i{
+    font-size: 25px;
+    color: #767676; 
+    margin-right: 10px;
+    
+}
+
+.dashboard_user .sidebar .menus a.active{
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #39568F;
+}
+
+.dashboard_user .sidebar .tulisan_bawah{
+    padding: 5px;
+
+}
+
+.dashboard_user .sidebar .tulisan_bawah h2{
+    font-size: 23px;
+}
+
+.dashboard_user .sidebar .menu_bawah{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.dashboard_user .sidebar button{
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 45px;
+    cursor: pointer;
+}
+
+.dashboard_user .sidebar button:hover{
+    background-color: #aaaaaa;
+}
+
+.dashboard_user .content{
+    padding: 10px 20px;
+}
+
+.dashboard_user .content .title h1{
+    font-size: 45px;
+    font-weight: 600;
+    color: #39568F;
+}
+
+.dashboard_user .content .title p{
+    color: #919191;
+    font-size: 17px;
+}
+
+.data_pasien .tambah_pasien{
+    width: 14%;
+    margin: 10px 0 30px 20px;
+}
+
+.data_pasien .dua_label{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.data_pasien .dua_input{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.data_pasien .dua_label .label_setengah{
+    width: 50%;
+}
+
+.data_pasien .dua_input .input_setengah{
+    width: 50%;
+}
+
+.data_pasien .dua_input .select_setengah{
+    width: 50%;
+}
+
+.data_pasien .satu_input_ditengah {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.data_pasien .satu_input_ditengah label{
+    width: 50%;
+}
+.data_pasien .satu_input_ditengah input{
+    width: 50%;
+}
+
+.data_pasien .input_nik{
+    margin-bottom: 10px;
+}
+
+.dashboard_user .content{
+    width: 78%;
+}
+
+.data_pasien table{
+    width: 100%;
+}
+
+.tampilanhilang{
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+.antrian_user .satu_antrian{
+    margin-top: 15px;
+    margin-right: 15px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    
+    padding: 5px;
+    border-radius: 10px;
+    align-items: center;
+    /* box-sizing: border-box; */
+    transition: 0.3s ease;
+
+}
+
+.antrian_user .satu_antrian:hover{
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.2);
+}
+
+.antrian_user .satu_antrian h1{
+    width: 100%;
+    font-size: 70px;
+    border-radius: 10px;
+    color: white;
+    background-color: #2FCAFF;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.antrian_user .satu_antrian h2{
+    font-size: 20px;
+}
+
+.antrian_user .satu_antrian h3{
+
+    font-size: 20px;
+    padding: 10px 15px;
+    font-weight: 700;
+}
+
+.antrian_user .satu_antrian .btn_info{
+    width: 100%;
+
+}
+
+.antrian_user{
+    /* padding: 30px; */
+}
+
+.antrian_user .tambah_antrian{
+    margin: 10px 0 30px 20px ;
+    width: 100%;
+    
+}
+
+.antrian_user .button_tambah{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.antrian_user .panjang_modal{
+    width: 800px;
+}
+
+.antrian_user .input_plus_button{
+    width: 30%;
+}
+
+.antrian_user .dua_input{
+ display: flex;
+ gap: 20px;
+ margin-bottom: 5px;
+}
+
+.antrian_user .dua_input .input_setengah{
+    width: 50%;
+}
+
+.antrian_user .dua_input .input_setengah_awal{
+    width: calc(50% + 20px);
+}
+
+.antrian_user .pilih_pasien{
+    width: 20%;
+    margin: 0;
+}
+
+.antrian_user .dua_label{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+}
+
+.antrian_user .dua_label label{
+    width: 500%;
+
+}
+
+.antrian_user .input_setengahs{
+    /* margin-bottom: 0px; */
+    width: calc(50% + 20px);
+}
+
+.antrian_user .input_setengahss{
+    width: 50%;
+}
+
+.no_antrianmuu{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.infoantrian h1{
+    font-size: 65px;
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+.info_status_antrian{
+    /* width: 100%; */
+    text-align: center;
+    background-color: rgb(170, 170, 170);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+.bg-green{
+    text-align: center;
+    background-color: rgb(23, 163, 77);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+
+.bg-red{
+    text-align: center;
+    background-color: rgb(255, 30, 30);
+    color: white;
+    border-radius: 5px;
+    padding: 5px 0;
+}

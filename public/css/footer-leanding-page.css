@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900");
+
+footer {
+    position: absolute;
+    left: 0;
+    height: fit-content;
+    margin-top: 320px;
+    width: 100%;
+    padding: 20px 0 0 0;
+    background: linear-gradient(40deg, #7048e8, #2666c9, #2ba2eb, #2ec5ff);
+}
+.footer-row {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 120px;
+}
+.box-support .box-col h1 {
+    color: #ffff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.box-support .box-col span {
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    display: block;
+}
+.box-about-us .box-col h1 {
+    color: #ffff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.box-about-us .box-col span {
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    display: block;
+}
+.box-contact .box-col h1 {
+    color: #ffff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.box-contact .box-col span {
+    color: #fff;
+    font-weight: 200;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    display: block;
+}
+.box-bottom-footer {
+    margin-top: 35px;
+    width: 100%;
+    border-top: 2px solid #b7b7b7;
+}
+.box-bottom-footer h1 {
+    margin-top: 30px;
+    font-size: 1rem;
+    text-align: center;
+    color: #ffff;
+    font-weight: 400;
+}

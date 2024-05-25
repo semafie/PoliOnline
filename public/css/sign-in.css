@@ -1,0 +1,251 @@
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+.inner-container {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 450px;
+    padding: 20px 0;
+    height: fit-content;
+    border: 2px solid #4a6aa3;
+    border-radius: 22px;
+    backdrop-filter: blur(1px);
+}
+.inner-container h1 {
+    font-size: 2.5rem;
+    color: #374987;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.inner-container .form-sign-in {
+    padding: 5px 40px;
+}
+.form-sign-in {
+    margin-bottom: 35px;
+}
+.form-sign-in label {
+    color: #374987;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.form-sign-in input {
+    border-radius: 5px;
+    border: 1px solid #fff;
+    margin: 5px 0;
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.form-sign-in input:hover {
+    border: 1px solid #374987;
+}
+.form-sign-in input:focus {
+    outline: none;
+}
+.form-sign-in .lupa-password {
+    margin-top: 5px;
+    text-align: end;
+}
+.form-sign-in .lupa-password a {
+    font-size: 0.9rem;
+    color: #374987;
+    font-weight: 500;
+}
+.form-sign-in .lupa-password a:hover {
+    color: #7889c7;
+}
+.form-sign-in .btn-login {
+    cursor: pointer;
+    color: #374987;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    border: 2px solid #374987;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.form-sign-in .btn-login:hover {
+    background-color: #7889c7;
+    transition: all 0.5s ease;
+    border: #7889c7;
+    color: white;
+}
+.form-sign-in h2 {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #374987;
+}
+
+.form-sign-in .btn-login-with-google {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid #374987;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    background-color: #374987;
+}
+.form-sign-in .btn-login-with-google img {
+    margin-right: 10px;
+    width: 25px;
+}
+.form-sign-in .btn-login-with-google:hover {
+    background-color: #7889c7;
+    transition: all 0.5s ease;
+    border: #7889c7;
+    color: #fff;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+    .inner-container {
+        width: 330px;
+    }
+    .inner-container h1 {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    .inner-container .form-sign-in {
+        padding: 5px 30px;
+    }
+    .form-sign-in {
+        margin-bottom: 28px;
+    }
+    .form-sign-in label {
+        color: #374987;
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+    .form-sign-in input {
+        border-radius: 5px;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        height: 42px;
+        transition: all 0.3s ease;
+    }
+    .form-sign-in .lupa-password a {
+        font-size: 0.7rem;
+    }
+    .form-sign-in .btn-login {
+        font-size: 1rem;
+        height: 42px;
+    }
+    .form-sign-in h2 {
+        font-size: 0.7rem;
+        margin: 7px 0;
+    }
+
+    .form-sign-in .btn-login-with-google {
+        font-size: 0.7rem;
+        height: 42px;
+    }
+    .form-sign-in .btn-login-with-google img {
+        margin-right: 7px;
+        width: 19px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .inner-container {
+        width: 380px;
+    }
+    .inner-container h1 {
+        font-size: 1.9rem;
+        margin-bottom: 30px;
+    }
+    .inner-container .form-sign-in {
+        padding: 5px 32px;
+    }
+    .form-sign-in {
+        margin-bottom: 30px;
+    }
+    .form-sign-in label {
+        color: #374987;
+        font-size: 0.9rem;
+    }
+    .form-sign-in input {
+        border-radius: 5px;
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        height: 46px;
+    }
+    .form-sign-in .lupa-password a {
+        font-size: 0.8rem;
+    }
+    .form-sign-in .btn-login {
+        font-size: 1.1rem;
+        height: 46px;
+    }
+    .form-sign-in h2 {
+        font-size: 0.8rem;
+        margin: 9px 0;
+    }
+
+    .form-sign-in .btn-login-with-google {
+        font-size: 0.8rem;
+        height: 46px;
+    }
+    .form-sign-in .btn-login-with-google img {
+        margin-right: 8px;
+        width: 19px;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .inner-container {
+        width: 400px;
+    }
+    .inner-container h1 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+    }
+    .inner-container .form-sign-in {
+        padding: 5px 38px;
+    }
+    .form-sign-in {
+        margin-bottom: 34px;
+    }
+    .form-sign-in label {
+        color: #374987;
+        font-size: 1rem;
+    }
+    .form-sign-in input {
+        border: 1px solid #fff;
+        padding: 5px 10px;
+        height: 48px;
+    }
+    .form-sign-in .lupa-password a {
+        font-size: 0.8rem;
+    }
+    .form-sign-in .btn-login {
+        font-size: 1.2rem;
+        height: 48px;
+    }
+    .form-sign-in h2 {
+        font-size: 0.8rem;
+        margin: 9px 0;
+    }
+
+    .form-sign-in .btn-login-with-google {
+        font-size: 0.9rem;
+        height: 48px;
+    }
+    .form-sign-in .btn-login-with-google img {
+        margin-right: 8px;
+        width: 20px;
+    }
+}
+
+.invalid-feedback{
+    font-size: 15px;
+    font-weight: 600;
+    color: red;
+
+}
