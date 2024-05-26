@@ -13,9 +13,7 @@ use App\Http\Controllers\PermintaanController;
 use App\Http\Controllers\cetakController;
 use App\Http\Middleware\UserMiddleware;
 
-Route::get('/', function () {
-    return view('leanding-page.leanding-page');
-})->name('home');;
+Route::get('/',[login_registerController::class, 'show_home'])->name('home');;
 
 
 Route::get('/tentang', function () {
