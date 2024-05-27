@@ -12,11 +12,13 @@
     <div class="all-section-1">
         <div class="container-section-1">
             <div class="side-left">
-                <h1>Daftar No Antrian rumah sakit dengan <span>Poli</span>Online.</h1>
+                <h1>Daftar No Antrian rumah sakit dengan <span>Sip</span>PH.</h1>
                 <div class="description">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim praesentium, asperiores perspiciatis
-                        ab ipsa optio reprehenderit itaque pariatur voluptatibus minima sit earum tempore quae
-                        necessitatibus nesciunt assumenda culpa non temporibus.</p>
+                    <div class="jadi_satu">
+                        <p>(Sistem Informasi Puskesmas Pelita Harapan)</p>
+                    <p>"Cukup Daftar Online dari rumah untuk periksa hari ini, besok atau lusa."</p>
+                    </div>
+                    
                 </div>
                 <div class="btn">
                     <button class="btn-daftar-no-antrian">Daftar No Antrian?</button>
@@ -46,25 +48,28 @@
                 <div class="side-left">
                     <div class="support-title">
                         <img src="{{ asset('img/icon-support.png') }}" alt="">
-                        <h1>Lorem ipsum</h1>
+                        <h1>Deskripsi</h1>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque aliquid saepe aut officia nostrum
-                        illo
-                        dignissimos placeat ducimus magnam. Soluta fugit libero expedita odit quis consequuntur sunt at
-                        nulla
-                        mollitia velit sit beatae voluptatum quae molestias inventore eaque asperiores molestiae nihil rerum
-                        dignissimos, iste, aperiam maiores vero quod. Voluptas nobis iure est nulla, quidem illum impedit
-                        nesciunt quae officia. Aliquid!</p>
+                    <p>Puskesmas Pelita Harapan merupakan fasilitas pelayanan kesehatan yang berkomitmen untuk memberikan pelayanan 
+                        kesehatan yang lebih cepat, tepat, dan merata, serta meningkatkan kualitas hidup masyarakat melalui pelayanan 
+                        kesehatan primer yang berkualitas. 
+                        Aplikasi ini dirancang untuk mendukung pasien dan tenaga medis dalam menyediakan layanan yang optimal dan efisien.</p>
                 </div>
                 <div class="side-right">
-                    <h1>Lorem ipsum</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque aliquid saepe aut officia nostrum
-                        illo
-                        dignissimos placeat ducimus magnam. Soluta fugit libero expedita odit quis consequuntur sunt at
-                        nulla
-                        mollitia velit sit beatae voluptatum quae molestias inventore eaque asperiores molestiae nihil rerum
-                        dignissimos, iste, aperiam maiores vero quod. Voluptas nobis iure est nulla, quidem illum impedit
-                        nesciunt quae officia. Aliquid!</p>
+                    <h1>Pelayanan</h1>
+                    <div class="sidep">
+                        <p>Puskesmas Pelita Harapan menyediakan Jenis Pelayanan Kesehatan :
+                        
+                        
+                        
+                        </p>
+                        <br><p>1. Poli Umum</p>
+                        <br><p>2. Poli Gigi</p>
+                        <br><p>3. Poli KIA</p>
+                        <br><p>Layanan untuk Mempermudah Mendaftar Puskemas Dimana Saja.</p>
+                    </div>
+                    
+
                 </div>
             </div>
 
@@ -82,7 +87,7 @@
                         <div class="box-no">
                             <span class="no">1</span>
                         </div>
-                        <span class="step">Step 1</span>
+                        <span class="step">Daftar</span>
                     </div>
                     <div class="box-title">{{-- flex --}}
                         <h1 class="title">Cara Menggunakan</h1>
@@ -91,11 +96,7 @@
                         </div>
                     </div>
                 </div>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus deleniti enim rem modi, quasi facilis
-                    adipisci iste? Ut sequi sunt assumenda quasi neque iusto sit animi quibusdam accusantium distinctio
-                    natus libero ea voluptatum nihil, possimus facilis? Aspernatur sequi sint rerum! Lorem ipsum dolor, sit
-                    amet consectetur adipisicing elit. Facilis non blanditiis exercitationem fuga porro sint natus nostrum.
-                    Sint, quam accusamus?</p>
+                <p>Daftar dengan email atau akun Google yang sudah ada untuk mulai menggunakan layanan kami. Pilihan ini memudahkan Anda untuk langsung memulai tanpa perlu membuat akun baru secara terpisah. Dengan opsi ini, proses pendaftaran menjadi lebih cepat dan efisien.</p>
             </div>
             <div class="side-container-section-3">
                 <div class="side-left-3">
@@ -104,19 +105,16 @@
                             <div class="box-number">
                                 <span class="number">2</span>
                             </div>
-                            <span class="step">Step 2</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi fugit, sapiente, atque
-                                incidunt eos dolores tempora debitis ullam voluptas, veritatis cupiditate quisquam totam
-                                cumque nulla?
+                            <span class="step">Login</span>
+                            <p>Untuk memulai, Anda dapat masukkan email dan password Anda. Atau, alternatifnya, Anda bisa login menggunakan akun Google. Setelah itu, cukup klik tombol login untuk melanjutkan ke langkah selanjutnya.
                             </p>
                         </div>
                         <div class="container-box-step">
                             <div class="box-number">
                                 <span class="number">3</span>
                             </div>
-                            <span class="step">Step 3</span>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam amet atque odit aut. Esse
-                                vero, quis quod nostrum reiciendis iusto obcaecati aspernatur eius eum dicta.eius eum dicta.
+                            <span class="step">Daftar Antrean</span>
+                            <p>Langkah selanjutnya adalah memasukkan data pasien dan memilih poli tujuan. Setelah Anda selesai memasukkan data, Anda dapat mencetak antrian untuk memproses kunjungan ke puskesmas dengan lebih cepat.
                             </p>
                         </div>
 
@@ -126,20 +124,16 @@
                             <div class="box-number">
                                 <span class="number">4</span>
                             </div>
-                            <span class="step">Step 4</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum itaque, impedit cupiditate
-                                eligendi nemo harum reiciendis velit accusantium eius fugiat totam, libero quia. Reiciendis,
-                                natus.
+                            <span class="step">Pemanggilan Antrean</span>
+                            <p>Setelah Anda selesai mencetak antrian, Anda perlu menunggu konfirmasi dari petugas untuk memilih dokter yang akan Anda temui. Setelah itu, Anda hanya perlu menunggu pemanggilan nomor antrian Anda sebelum Anda dapat dilayani oleh dokter yang telah dipilih.
                             </p>
                         </div>
                         <div class="container-box-step">
                             <div class="box-number">
                                 <span class="number">5</span>
                             </div>
-                            <span class="step">Step 5</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit nesciunt est,
-                                voluptas officia aliquam, sit consectetur reiciendis hic, earum quidem perferendis explicabo
-                                excepturi magni.
+                            <span class="step">Logout</span>
+                            <p>Terakhir, jangan lupa untuk keluar dari akun Anda saat Anda selesai menggunakan platform kami. Dengan melakukan logout, Anda akan menjaga keamanan akun Anda dan melindungi informasi pribadi Anda. Ini adalah langkah yang penting untuk menjaga privasi dan keamanan data Anda.
                             </p>
                         </div>
                     </div>

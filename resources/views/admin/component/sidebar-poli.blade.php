@@ -56,7 +56,7 @@
             </g>
           </svg>
         </span>
-        <span class="judul_dashboard">Poli<span>Online.</span></span>
+        <span class="judul_dashboard">Sip<span>PH.</span></span>
       </a>
 
       <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">

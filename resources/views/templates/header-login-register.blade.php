@@ -21,7 +21,7 @@
     {{-- start navbar --}}
     <header>
         <div class="navbar">
-            <div class="logo"><a href="{{ route('home') }}">Poli<span>Online</span></a></div>
+            <div class="logo"><a href="{{ route('home') }}">Sip<span>PH.</span></a></div>
             <ul class="links">
                 <li><a href="{{ route('home') }}">Home</a></li>
                 <li><a href="{{ route('sign-in') }}" class="@active('sign-in')">Sign In</a></li>

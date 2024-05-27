@@ -17,7 +17,7 @@
         {{-- START NAVBAR --}}
         <nav>
             <div class="navbar">
-                <a class="logo" href="{{ route('home') }}">Poli<span>Online</span></a>
+                <a class="logo" href="{{ route('home') }}">Sip<span>PH.</span></a>
                 <input type="checkbox" id="check">
                 <label for="check" class="icon">
                     <i class='bx bx-menu' id="menu-icon"></i>

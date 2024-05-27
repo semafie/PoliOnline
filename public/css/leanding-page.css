@@ -44,7 +44,8 @@
     width: 70%;
 }
 .container-section-1 .side-left .description p {
-    font-size: 1rem;
+    margin: 0;
+    font-size: 18px;
     font-weight: 300;
     color: #f8fdff;
 }
@@ -282,10 +283,14 @@
     text-align: center;
     margin-top: 10px;
 }
-.container-section-2 .overlay-container-side-2 .side-right p {
+.container-section-2 .overlay-container-side-2 .side-right .sidep {
     font-size: 1.2rem;
     font-weight: 300;
     margin-top: 50px;
+}
+
+.container-section-2 .overlay-container-side-2 .side-right .sidep p{
+    margin: 0;
 }
 .template-section {
     height: 100vh;
