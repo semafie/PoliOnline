@@ -304,7 +304,7 @@
     margin-top: 20px;
     margin-bottom: 80px;
     width: 54%;
-    font-size: 1.1rem;
+    font-size: 17px;
     color: #898989;
     font-weight: 300;
 }
@@ -421,7 +421,7 @@
     .top-side-left-container-3
     .container-box-step
     p {
-    font-size: 1.1rem;
+    font-size: 16px;
     color: #898989;
     font-weight: 300;
     margin: 15px 0;
@@ -486,7 +486,7 @@
     .top-side-left-container-3
     .container-box-step
     p {
-    font-size: 1.1rem;
+    font-size: 16px;
     color: #898989;
     font-weight: 300;
     margin-top: 10px;
@@ -550,7 +550,7 @@
     .bottom-side-left-container-3
     .container-box-step
     p {
-    font-size: 1.1rem;
+    font-size: 16px;
     color: #898989;
     font-weight: 300;
     margin-top: 10px;
@@ -779,4 +779,24 @@
 .container-section-4 .img-jeruk img {
     width: 300px;
     height: fit-content;
+}
+
+@media (max-width: 1366px) {
+    .side-container-section-3
+    .side-left-3
+    .bottom-side-left-container-3
+    .container-box-step
+    p {
+    font-size: 13px;
+    color: #898989;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.side-container-section-3
+    .side-left-3
+    .top-side-left-container-3
+    .container-box-step
+    p {
+        font-size: 13px;
+    }
 }

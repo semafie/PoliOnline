@@ -88,11 +88,9 @@ class AdminController extends Controller
     }
 
     public function show_Laporan(){
-        $Antrian = LaporanModel::whereNotNull('id_dokter')
-                       ->where('status', 'selesai')
+        $Antrian = LaporanModel::where('status', 'selesai')
                        ->with('pasien', 'dokter')
                        ->get();
-        $today = Carbon::today();
 
 // Memformat tanggal hari ini menjadi string 'Y-m-d'
 // $formattedToday = $today->format('Y-m-d');

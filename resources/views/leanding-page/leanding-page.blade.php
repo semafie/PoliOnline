@@ -12,7 +12,7 @@
     <div class="all-section-1">
         <div class="container-section-1">
             <div class="side-left">
-                <h1>Daftar No Antrian rumah sakit dengan <span>Sip</span>PH.</h1>
+                <h1>Daftar No Antrian Puskesmas dengan <span>Sip</span>PH.</h1>
                 <div class="description">
                     <div class="jadi_satu">
                         <p>(Sistem Informasi Puskesmas Pelita Harapan)</p>
@@ -106,7 +106,7 @@
                                 <span class="number">2</span>
                             </div>
                             <span class="step">Login</span>
-                            <p>Untuk memulai, Anda dapat masukkan email dan password Anda. Atau, alternatifnya, Anda bisa login menggunakan akun Google. Setelah itu, cukup klik tombol login untuk melanjutkan ke langkah selanjutnya.
+                            <p class="sasasa">Untuk memulai, Anda dapat masukkan email dan password Anda. Atau, alternatifnya, Anda bisa login menggunakan akun Google. Setelah itu, cukup klik tombol login untuk melanjutkan ke langkah selanjutnya.
                             </p>
                         </div>
                         <div class="container-box-step">
@@ -114,7 +114,7 @@
                                 <span class="number">3</span>
                             </div>
                             <span class="step">Daftar Antrean</span>
-                            <p>Langkah selanjutnya adalah memasukkan data pasien dan memilih poli tujuan. Setelah Anda selesai memasukkan data, Anda dapat mencetak antrian untuk memproses kunjungan ke puskesmas dengan lebih cepat.
+                            <p class="sasasa">Langkah selanjutnya adalah memasukkan data pasien dan memilih poli tujuan. Setelah Anda selesai memasukkan data, Anda dapat mencetak antrian untuk memproses kunjungan ke puskesmas dengan lebih cepat.
                             </p>
                         </div>
 
