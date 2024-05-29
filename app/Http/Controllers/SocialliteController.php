@@ -16,7 +16,7 @@ class SocialliteController extends Controller
     }
 
     public function callback(){
-        $socialuser =  Socialite::driver('google')->user();
+        $socialuser =  Socialite::driver('google')->stateless()->user();
 
         $registerUser = User::where('google_id', $socialuser->id)->first();
 

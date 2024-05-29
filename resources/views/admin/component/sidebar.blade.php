@@ -57,7 +57,7 @@
             </g>
           </svg>
         </span>
-          <img src="{{ asset('/img/logo_si.png') }}" alt="">
+          <img class="logosidebar" src="{{ asset('/img/logo_si.png') }}" alt="">
           <span class="judul_dashboard">Sip<span>PH.</span></span>
         
       </a>
