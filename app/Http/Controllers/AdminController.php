@@ -92,7 +92,7 @@ class AdminController extends Controller
                        ->with('pasien', 'dokter')
                        ->first();
 
-        dd($Antrian->dokter->nama_dokter);
+        // dd($Antrian->dokter->nama_dokter);
 
 // Memformat tanggal hari ini menjadi string 'Y-m-d'
 // $formattedToday = $today->format('Y-m-d');
