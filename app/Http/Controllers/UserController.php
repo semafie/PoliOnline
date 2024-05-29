@@ -54,7 +54,10 @@ class UserController extends Controller
         ]);
     }
     public function show_riwayatantrian(){
-        $Antrian = AntrianModel::where('id_user', User::find(Auth::user()->id))
+        $id_user = User::find(Auth::user()->id);
+        $Antrian = AntrianModel::whereHas('pasien', function($query) use ($id_user) {
+            $query->where('id_user', $id_user);
+        })
         ->where('status', 'selesai')
         ->with('pasien', 'dokter')
         ->get();

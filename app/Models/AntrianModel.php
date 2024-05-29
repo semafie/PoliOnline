@@ -15,6 +15,7 @@ class AntrianModel extends Model
         'keterangan',
         'id_dokter',
         'id_pasien',
+        'id_user',
         'tanggal',
         'jam',
         'status'
