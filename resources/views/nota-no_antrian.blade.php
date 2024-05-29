@@ -97,7 +97,7 @@
             echo $poli;
         @endphp</h3>
         <div class="garis"></div>
-        <p class="terimakasih">Terima kasih telah menggunakan situs PoliOnline semoga hari anda menyenangkan</p>
+        <p class="terimakasih">Terima kasih telah menggunakan situs SipPH. semoga hari anda menyenangkan</p>
     </div>
     @endforeach
     
