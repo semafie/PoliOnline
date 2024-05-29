@@ -9,8 +9,7 @@ use App\Models\AntrianModel;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Support\Carbon;
-
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -36,20 +35,33 @@ class UserController extends Controller
         ]);
     }
     public function show_antrianberjalan(){
-
+        $tanggalHariIni = Carbon::today();
+    $formattedToday = $tanggalHariIni->format('Y-m-d');
+        $id_user = 1;
+        $Antrian = AntrianModel::whereDate('tanggal', $formattedToday)
+        ->whereNotNull('id_dokter')
+        ->where('status', '!=', 'selesai')
+        ->with('pasien', 'dokter')
+        ->get();
         
 
         return view ('user.layout.antrianberjalan_user', [
             'title' => 'No Antrian Berjalan',
             'subtitle' => 'menu no antrian sasasa',
             'getRecord' => User::find(Auth::user()->id),
+            'Antrian' => $Antrian
              
         ]);
     }
     public function show_riwayatantrian(){
+        $Antrian = AntrianModel::where('id_user', User::find(Auth::user()->id))
+        ->where('status', 'selesai')
+        ->with('pasien', 'dokter')
+        ->get();
         return view ('user.layout.riwayatantrian', [
             'title' => 'Riwayat Antrianmu',
             'subtitle' => 'menu no antrian sasasa',
+            'Antrian' => $Antrian,
             'getRecord' => User::find(Auth::user()->id)
         ]);
     }
@@ -85,7 +97,7 @@ class UserController extends Controller
                 
             } else {
                 // Jika data ditemukan
-                echo 'Data ditemukan';
+                // echo 'Data ditemukan';
 
                 // return redirect()->route('')-
                 return redirect()->route('user_antrians',[

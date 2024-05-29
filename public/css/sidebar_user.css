@@ -346,3 +346,14 @@ body{
     border-radius: 5px;
     padding: 5px 0;
 }
+
+.status_antrian{
+    display: flex;
+    justify-content: center;
+    background-color: grey  ;
+    margin: 0;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: white;
+}

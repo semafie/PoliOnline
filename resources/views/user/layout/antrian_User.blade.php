@@ -73,7 +73,7 @@
             
           </div>
           <div class="modal-footer">
-            <form action="/cetakantrians/{{ $item->id }}" method="POST">
+            <form action="/cetakantrians/{{ $item->id }}" method="POST" target="_blank">
             @csrf
             @method('put')
             <button class="btn btn-primary" data-bs-target="#modalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Print</button>

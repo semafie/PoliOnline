@@ -14,6 +14,7 @@
                     <th>tanggal</th>
                     <th>Tujuan Poli</th>
                     <th>Status</th>
+                    <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -30,6 +31,14 @@
                       {{-- <div class="btn-group "> --}}
                         
                       {{-- </div> --}}
+                    </td>
+                    
+                    <td>
+                      <form action="/admin/cetakantrians/{{ $item->id }}" method="POST" target="_blank">
+                        @csrf
+                        @method('put')
+                      <button  type="button " class="btn btn-warning ">Print</button>
+                      </form>
                     </td>
                   </tr>
                 @endforeach

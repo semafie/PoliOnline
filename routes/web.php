@@ -56,6 +56,9 @@ Route::put('/admin/data_pasien/edit/{id}',[PasienController::class,'edit_pasien'
 Route::delete('/admin/data_pasien/delete/{id}',[PasienController::class,'delete_pasien'])->name('delete_pasien');
 
 Route::get('/admin/laporan',[AdminController::class,'show_Laporan'])->name('admin_Laporan');
+
+Route::put('/admin/cetakantrians/{id}',[cetakController::class, 'cetakantrians'])->name('cetaks');
+
 });
 
 
@@ -69,6 +72,7 @@ Route::get('/auth/google/callback', [SocialliteController::class, 'callback'])->
 Route::post('/authentication',[login_registerController::class, 'login'])->name('login');
 Route::get('/login',[login_registerController::class, 'show_login'])->name('sign-in');
 Route::get('/register',[login_registerController::class, 'show_register'])->name('sign-up');
+Route::post('/register',[login_registerController::class, 'register'])->name('register');
 Route::get('/cetakantrian',[cetakController::class, 'cetakantrian'])->name('cetak');
 
 Route::get('/awal',[cetakController::class, 'index'])->name('index');
@@ -97,7 +101,11 @@ Route::group(['middleware' => 'admin_poli'], function(){
     Route::get('/admin_poli/poli_kia',[Admin_poliController::class,'show_antrianpolikia'])->name('admin_polikia_antrian');
 
     Route::put('/admin_poli/edit/{id}',[Admin_poliController::class,'edit_antrian'])->name('admin_poli_editstatus');
+    
 });
+
+Route::get('/admin/profile',[AdminController::class,'show_profile'])->name('admin_profile');
+Route::put('/admin/profile/edit/{id}',[AdminController::class,'edit_profile'])->name('edit_profile');
 
 Route::get('/logout',[login_registerController::class,'logout'])->name('logout');
 

@@ -73,7 +73,7 @@
 <body>
     @forEach($Antrian as $item)
     <div class="container">
-        <h1>Poli<span>Online.</span></h1>
+        <h1>Sip<span>PH.</span></h1>
         <p>sistem informasi No Antrian</p>
             <div class="garis"></div>
         <h2>{{ $item->no_antrian }}</h2>

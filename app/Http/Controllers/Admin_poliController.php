@@ -8,7 +8,7 @@ use App\Models\LaporanModel;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class Admin_poliController extends Controller
 {
@@ -94,7 +94,8 @@ class Admin_poliController extends Controller
          'Antrian_menunggu' => $Antrian_menunggu,
          'Antrian_bersiap' => $Antrian_bersiap,
          'Antrian_masuk' => $Antrian_masuk,
-         'getRecord' => User::find(Auth::user()->id)]);
+         'getRecord' => User::find(Auth::user()->id)
+        ]);
     }
     
     public function show_antrianpolikia(){
@@ -185,7 +186,7 @@ class Admin_poliController extends Controller
                 $statuslaporan->save();
                 return redirect()->route('admin_poliumum_antrian')->with(Session::flash('success_edit', true));
                 } else{
-                    return redirect()->route('admin_poliumum_antrian')->with(Session::flash('gagal_edit', true));
+                return redirect()->route('admin_poliumum_antrian')->with(Session::flash('gagal_edit', true));
                 }
 
             } else{
@@ -255,9 +256,9 @@ class Admin_poliController extends Controller
                         $statuslaporan->status = $request->input('select_status');
                         $status->save();
                         $statuslaporan->save();
-                        return redirect()->route('admin_poliumum_antrian')->with(Session::flash('success_edit', true));
+                        return redirect()->route('admin_poligigi_antrian')->with(Session::flash('success_edit', true));
                         } else{
-                            return redirect()->route('admin_poliumum_antrian')->with(Session::flash('gagal_edit', true));
+                            return redirect()->route('admin_poligigi_antrian')->with(Session::flash('gagal_edit', true));
                         }
             
                     } else if($nama_status == 'bersiap'){
@@ -266,16 +267,16 @@ class Admin_poliController extends Controller
                         $statuslaporan->status = $request->input('select_status');
                         $status->save();
                         $statuslaporan->save();
-                        return redirect()->route('admin_poliumum_antrian')->with(Session::flash('success_edit', true));
+                        return redirect()->route('admin_poligigi_antrian')->with(Session::flash('success_edit', true));
                         } else{
-                            return redirect()->route('admin_poliumum_antrian')->with(Session::flash('gagal_edit', true));
+                            return redirect()->route('admin_poligigi_antrian')->with(Session::flash('gagal_edit', true));
                         }
                     } else{
                         $status->status = $request->input('select_status');
                         $statuslaporan->status = $request->input('select_status');
                         $status->save();
                         $statuslaporan->save();
-                        return redirect()->route('admin_poliumum_antrian')->with(Session::flash('success_edit', true));
+                        return redirect()->route('admin_poligigi_antrian')->with(Session::flash('success_edit', true));
                     }
 
         } else{

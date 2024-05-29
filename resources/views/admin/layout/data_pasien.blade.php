@@ -199,7 +199,7 @@
                   
                               <div class="dua_input">
                                   <input type="text" class="form-control input_setengah" readonly id="input_usias" name="input_usias" placeholder="Masukan id Pasien" aria-describedby="defaultFormControlHelp" value="{{ $item->usia }}"/>
-                                      <input class="form-control input_setengah" id="input_tanggal_lahirs" name="input_tanggal_lahirs" onchange="hitungUsias()" type="date" id="input_tanggal" value="{{ $item->tanggal_lahir }}" />
+                                      <input class="form-control input_setengah"  name="tanggal_lahir" type="date" id="input_tanggal" value="{{ $item->tanggal_lahir }}" />
                               </div>
           
                               <div class="satu_input_ditengah">

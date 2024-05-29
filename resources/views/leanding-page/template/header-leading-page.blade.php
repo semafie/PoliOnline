@@ -24,10 +24,10 @@
                     <i class='bx bx-x' id="close-icon"></i>
                 </label>
                 <ul class="links">
-                    <li><a href="{{ route('home') }}" class="active">Home</a></li>
-                    <li><a href="#">Tentang</a></li>
-                    <li><a href="#">Cara Menggunakan</a></li>
-                    <li><a href="#">Lihat Antrian</a></li>
+                    <li><a onclick="scrollToTargetkemabali()" class="active">Home</a></li>
+                    <li><a onclick="scrollToTarget_tentang()">Tentang</a></li>
+                    <li><a onclick="scrollToTarget_caramenggunakan()">Cara Menggunakan</a></li>
+                    <li><a onclick="scrollToTarget_lihatantrian()" >Lihat Antrian</a></li>
                 </ul>
                 <div class="btn">
                     <a href="{{ route('sign-in') }}"><button class="btn-login">Sign in</button></a>

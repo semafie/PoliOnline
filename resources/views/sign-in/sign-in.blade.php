@@ -69,6 +69,14 @@
     icon: 'success',
     confirmButtonText: 'Oke'
   })
+  @elseif(Session::has('berhasil register'))
+
+  Swal.fire({
+    title: 'Berhasil',
+    text: 'Anda berhasil registrasi',
+    icon: 'success',
+    confirmButtonText: 'Oke'
+  })
   @endif
   </script>
 

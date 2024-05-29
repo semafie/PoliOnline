@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AntrianModel;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -43,7 +45,57 @@ class login_registerController extends Controller
     }
 
     public function show_home(){
-        return view('leanding-page.leanding-page');
+        $tanggalHariIni = Carbon::today();
+    $formattedToday = $tanggalHariIni->format('Y-m-d');
+    $Antrian = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where(function ($query) {
+        $query->where('status', 'menunggu')
+            ->orWhere(function ($query) {
+                $query->where('status', 'bersiap');
+            });
+    })
+    ->where('status', '!=', 'selesai')
+    ->with('pasien', 'dokter')
+    ->get();
+
+    $antrianPertama = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Umum');
+    })
+    ->orderBy('id', 'asc')
+    ->first();
+
+// Query kedua
+$antrianKedua = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Gigi');
+    })
+    ->orderBy('id', 'asc')
+    
+    ->first();
+
+// Query ketiga
+$antrianKetiga = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Kia');
+    })
+    ->orderBy('id', 'asc')
+    // ->skip(2) // Melewati 2 data pertama
+    ->first();
+
+        return view('leanding-page.leanding-page',[
+            'Antrian' => $Antrian,
+            'antrianpertama' => $antrianPertama,
+            'antriankedua' => $antrianKedua,
+            'antrianketiga' => $antrianKetiga,
+        ]);
     }
 
     public function show_login(){
@@ -87,5 +139,29 @@ class login_registerController extends Controller
     public function logout(){
         Auth::logout();
         return redirect(url('login'));
+    }
+
+    public function register(Request $request){
+        $validatedData = $request->validate([
+            'username' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+        if($request->confirm_password != $request->password){
+            return redirect()->route('sign-up')->with(Session::flash('samakan password', true));
+        }
+        // Hash password
+        $hashedPassword = Hash::make($validatedData['password']);
+
+        // Simpan pengguna baru ke database
+        $user = User::create([
+            'name' => $validatedData['username'],
+            'email' => $validatedData['email'],
+            'password' => $hashedPassword,
+            'role'=> 'pasien'
+        ]);
+
+        // Redirect atau berikan respons sesuai kebutuhan
+        return redirect()->route('sign-in')->with(Session::flash('berhasil register', true));
     }
 }

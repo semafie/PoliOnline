@@ -2,6 +2,7 @@
 @section('content')
 <div class="container-xxl flex-grow-1 container-p-y">
     <div class="card data_dokter">
+      <button type="button " class="btn mb-1 btn-primary btn_tambah" data-bs-toggle="modal" data-bs-target="#tambahdokter">Print</button>
         <div class="text-nowrap table-responsive p-3">
             <table id="halo" class="table border-top table-hover">
               <thead>
@@ -26,7 +27,7 @@
                     <td>{{ $item->jam }}</td>
                     <td>{{ $item->tanggal }}</td>
                     <td>{{ $item->dokter->nama_poli }}</td>
-                    <td>{{ $item->status }}</td>
+                    <td><p class="status_antrian">{{ $item->status }}</p></td>
                   </tr>
                 @endforeach
               </tbody>
@@ -38,4 +39,6 @@
 <script>
   let table = new DataTable('#halo');
 </script>
+
+
 @endsection

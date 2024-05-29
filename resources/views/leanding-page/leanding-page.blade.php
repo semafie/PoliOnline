@@ -21,8 +21,8 @@
                     
                 </div>
                 <div class="btn">
-                    <button class="btn-daftar-no-antrian">Daftar No Antrian?</button>
-                    <button class="btn-liat-no-antrian">Lihat No antrian?</button>
+                    <a href="{{ route('sign-in') }}"><button  class="btn-daftar-no-antrian">Daftar No Antrian?</button></a>
+                    <button onclick="scrollToTarget_lihatantrian()" class="btn-liat-no-antrian">Lihat No antrian?</button>
                 </div>
             </div>
             <div class="side-right">
@@ -36,7 +36,7 @@
     {{-- end section bagian 1 --}}
 
     {{-- start section 2 tentang sistem --}}
-    <div class="template-section-2">
+    <div id="tentang" class="template-section-2">
         <div class="container-section-2">
             <div class="container-title-2">
                 <div class="box-icon-info">
@@ -79,7 +79,7 @@
     {{-- end section 2 tentang sistem --}}
 
     {{-- start section 3 cara menggunakan --}}
-    <div class="template-section">
+    <div id="cara_menggunakan" class="template-section">
         <div class="container-section-3">
             <div class="top-container-3">
                 <div class="box-number-title-3">
@@ -148,7 +148,7 @@
         </div>
     </div>
     {{-- end section 3 cara menggunakan --}}
-    <div class="template-section">
+    <div class="template-section" id="target-element">
         <div class="container-section-4">
             <div class="top-section-4">
                 <div class="top-left-4">{{-- flex --}}
@@ -177,84 +177,44 @@
             </div>
             <div class="container-no-antrian">
                 <div class="left-side-4">
+
                     <div class="container-left-side-top-4">
                         <div class="container-box-no-antrian-1">
                             <div class="inside-box-no-antrian-1">{{-- flex --}}{{-- space between --}}
-                                <h1>A23</h1>
-                                <h2>Masuk</h2>
+                                <h1>{{ $antrianpertama->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianpertama->status ?? 'kosong' }}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="container-left-side-bottom-4">{{-- flex --}}
                         <div class="container-box-no-antrian-2">
                             <div class="inside-box-no-antrian-2">{{-- block --}}
-                                <h1>A21</h1>
-                                <h2>Masuk</h2>
+                                <h1>{{ $antriankedua->no_antrian ?? '-'}}</h1>
+                                <h2>{{ $antriankedua->status ?? 'kosong' }}</h2>
                             </div>
                         </div>
                         <div class="container-box-no-antrian-2">
                             <div class="inside-box-no-antrian-2">{{-- block --}}
-                                <h1>A21</h1>
-                                <h2>Masuk</h2>
+                                <h1>{{ $antrianketiga->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianketiga->status ?? 'kosong' }}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="right-side-4">
+                    @foreach ($Antrian as $item)
+                        
+                    
                     <div class="container-box-bersiap-dipanggil">
                         <div class="inside-box-bersiap-dipanggil">
                             <div class="inside-left-bersiap-dipanggil">
                                 <div class="box-icon"></div>
-                                <h2>Bersiap Dipanggil</h2>
+                                <h2>{{ $item->status }} Dipanggil</h2>
                             </div>
-                            <h1>A22</h1>
+                            <h1>{{ $item->no_antrian }}</h1>
                         </div>
                     </div>
-                    <div class="container-box-bersiap-dipanggil">
-                        <div class="inside-box-bersiap-dipanggil">
-                            <div class="inside-left-bersiap-dipanggil">
-                                <div class="box-icon"></div>
-                                <h2>Bersiap Dipanggil</h2>
-                            </div>
-                            <h1>A22</h1>
-                        </div>
-                    </div>
-                    <div class="container-box-bersiap-dipanggil">
-                        <div class="inside-box-bersiap-dipanggil">
-                            <div class="inside-left-bersiap-dipanggil">
-                                <div class="box-icon"></div>
-                                <h2>Bersiap Dipanggil</h2>
-                            </div>
-                            <h1>A22</h1>
-                        </div>
-                    </div>
-                    <div class="container-box-bersiap-dipanggil">
-                        <div class="inside-box-bersiap-dipanggil">
-                            <div class="inside-left-bersiap-dipanggil">
-                                <div class="box-icon"></div>
-                                <h2>Bersiap Dipanggil</h2>
-                            </div>
-                            <h1>A22</h1>
-                        </div>
-                    </div>
-                    <div class="container-box-bersiap-dipanggil">
-                        <div class="inside-box-bersiap-dipanggil">
-                            <div class="inside-left-bersiap-dipanggil">
-                                <div class="box-icon"></div>
-                                <h2>Bersiap Dipanggil</h2>
-                            </div>
-                            <h1>A22</h1>
-                        </div>
-                    </div>
-                    <div class="container-box-bersiap-dipanggil">
-                        <div class="inside-box-bersiap-dipanggil">
-                            <div class="inside-left-bersiap-dipanggil">
-                                <div class="box-icon"></div>
-                                <h2>Bersiap Dipanggil</h2>
-                            </div>
-                            <h1>A22</h1>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="img-jeruk">
@@ -262,5 +222,23 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function scrollToTarget_lihatantrian() {
+            var targetElement = document.getElementById('target-element');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToTarget_caramenggunakan() {
+            var targetElement = document.getElementById('cara_menggunakan');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToTarget_tentang() {
+            var targetElement = document.getElementById('tentang');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToTargetkemabali() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
     @include('leanding-page.template.footer-leading-page')
 @endsection
