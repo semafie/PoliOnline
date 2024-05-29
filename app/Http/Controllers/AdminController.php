@@ -90,7 +90,8 @@ class AdminController extends Controller
     public function show_Laporan(){
         $Antrian = AntrianModel::where('status', 'selesai')
                        ->with('pasien', 'dokter')
-                       ->first();
+                       ->get();
+        
 
         // dd($Antrian->dokter->nama_dokter);
 
