@@ -291,3 +291,13 @@
     height: 40px;
     margin-right: 10px;
 }
+
+.dashboard .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    background: linear-gradient(45deg, rgba(155, 235, 246, 0.2), rgba(82, 234, 255, 0.03));
+    /* background-color: rgb(0, 0, 0, 0.05); */
+    border-radius: 7px;
+}

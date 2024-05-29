@@ -218,7 +218,8 @@
                 </div>
             </div>
             <div class="img-jeruk">
-                <img src="{{ asset('img/jeruk.png') }}" alt="">
+                {{-- <img src="{{ asset('img/jeruk.png') }}" alt=""> --}}
+                <iframe src="https://assets.pinterest.com/ext/embed.html?id=823032900682318177" height="445" width="345" frameborder="0" scrolling="no" ></iframe>
             </div>
         </div>
     </div>
