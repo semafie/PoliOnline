@@ -90,7 +90,9 @@ class AdminController extends Controller
     public function show_Laporan(){
         $Antrian = LaporanModel::where('status', 'selesai')
                        ->with('pasien', 'dokter')
-                       ->get();
+                       ->first();
+
+        dd($Antrian->dokter->nama_dokter);
 
 // Memformat tanggal hari ini menjadi string 'Y-m-d'
 // $formattedToday = $today->format('Y-m-d');
