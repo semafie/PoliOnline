@@ -88,7 +88,7 @@ class AdminController extends Controller
     }
 
     public function show_Laporan(){
-        $Antrian = LaporanModel::where('status', 'selesai')
+        $Antrian = AntrianModel::where('status', 'selesai')
                        ->with('pasien', 'dokter')
                        ->first();
 
