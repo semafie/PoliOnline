@@ -49,7 +49,7 @@
 <body>
     <div class="dashboard_user">
         <div class="sidebar">
-            <a href=""><h1 class="logos">Sip<span>PH.</span></h1></a>
+            <a href="{{ route('home') }}"><h1 class="logos">Sip<span>PH.</span></h1></a>
             <div class="garis"></div>
             <div class="menus">
                 <a href="{{ route('user_antrians') }} " class="@active('user_antrians')"><i class="bx bxs-add-to-queue"></i>No Antrianmu</a>

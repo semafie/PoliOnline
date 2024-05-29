@@ -59,7 +59,8 @@ Route::get('/admin/laporan',[AdminController::class,'show_Laporan'])->name('admi
 
 Route::put('/admin/cetakantrians/{id}',[cetakController::class, 'cetakantrians'])->name('cetaks');
 Route::post('/admin/cetaklaporan',[cetakController::class, 'cetaklaporan'])->name('admin_cetaklaporan');
-
+Route::get('/admin/profile',[AdminController::class,'show_profile'])->name('admin_profile');
+Route::put('/admin/profile/edit/{id}',[AdminController::class,'edit_profile'])->name('edit_profile');
 });
 
 
@@ -106,7 +107,8 @@ Route::group(['middleware' => 'admin_poli'], function(){
     Route::get('/admin_poli/poli_kia',[Admin_poliController::class,'show_antrianpolikia'])->name('admin_polikia_antrian');
 
     Route::put('/admin_poli/edit/{id}',[Admin_poliController::class,'edit_antrian'])->name('admin_poli_editstatus');
-    
+    Route::get('/admin/profiles',[AdminController::class,'show_profile'])->name('admin_profile');
+    Route::put('/admin/profile/edit/{id}',[AdminController::class,'edit_profile'])->name('edit_profile');
 });
 
 Route::get('/admin/profile',[AdminController::class,'show_profile'])->name('admin_profile');

@@ -28,7 +28,7 @@ class UserController extends Controller
         $Pasienakun = PasienModel::where('id_user', $halo->id)->get();
         return view ('user.layout.antrian_User', [
             'title' => 'No Antrianmu',
-            'subtitle' => 'menu no antrian setiap pasien hanya bole 1 antrian setiap 1 hari',
+            'subtitle' => 'menu no antrian setiap pasien hanya boleh 1 antrian setiap 1 hari',
             'getRecord' => User::find(Auth::user()->id),
             'Pasienakun' => $Pasienakun,
             'Antrianmu' => $Antrianmu
@@ -63,7 +63,7 @@ class UserController extends Controller
         ->get();
         return view ('user.layout.riwayatantrian', [
             'title' => 'Riwayat Antrianmu',
-            'subtitle' => 'Menampilkan riwayat antrianmu yang suda selesai',
+            'subtitle' => 'Menampilkan riwayat antrianmu yang sudah selesai',
             'Antrian' => $Antrian,
             'getRecord' => User::find(Auth::user()->id)
         ]);

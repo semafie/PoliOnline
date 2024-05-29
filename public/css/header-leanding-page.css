@@ -51,6 +51,11 @@
     color: #1c4779;
     border-radius: 4px;
 }
+
+.navbar .btn{
+    
+}
+
 .navbar .btn .btn-login {
     cursor: pointer;
     background-color: #f8fdff;
@@ -97,7 +102,17 @@
 #check {
     display: none;
 }
-@media screen and (max-width: 1000px) {
+
+nav.active{
+    position: fixed;
+    background: linear-gradient(45deg, rgba(125, 58, 228, 0.8), rgba(10, 169, 255, 0.8), rgba(82, 234, 255, 0.8));
+    z-index: 1000;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 15px;
+    border-radius: 40px;
+}
+/* @media screen and (max-width: 1000px) {
     .icon {
         display: block;
     }
@@ -133,9 +148,9 @@
         font-size: 1.2rem;
         margin: 15px 20px;
     }
-}
+} */
 /* Untuk layar dengan lebar antara 480px dan 767px (layar HP dan ukuran sedang) */
-@media screen and (min-width: 480px) and (max-width: 767px) {
+/* @media screen and (min-width: 480px) and (max-width: 767px) {
     .navbar .links {
         display: none;
         position: absolute;
@@ -169,9 +184,9 @@
     .navbar .btn button {
         margin: 5px;
     }
-}
+} */
 /* Untuk layar dengan lebar kurang dari 480px (layar HP) */
-@media screen and (max-width: 479px) {
+/* @media screen and (max-width: 479px) {
     .navbar .logo {
         font-size: 1.3rem;
     }
@@ -181,4 +196,31 @@
     .navbar .links {
         top: 70px;
     }
+}*/
+
+.sudah_login{
+    display: flex;
+    align-items: center;
+} 
+
+.sudah_login p{
+    text-align: center;
+    margin: 0;
+    color: white;
+    margin-right: 15px;
 }
+
+.sudah_login img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cobakk{
+    /* left: 400px; */
+left: auto;
+
+}
+
+

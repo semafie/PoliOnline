@@ -82,7 +82,7 @@
         <div class="layout-page">
           <!-- Navbar -->
 
-          @include('admin.component.navbar')
+          @include('admin.component.navbar-poli')
 
           <!-- / Navbar -->
 

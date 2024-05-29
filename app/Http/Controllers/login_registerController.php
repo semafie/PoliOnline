@@ -90,11 +90,19 @@ $antrianKetiga = AntrianModel::whereDate('tanggal', $formattedToday)
     // ->skip(2) // Melewati 2 data pertama
     ->first();
 
+    if (Auth::check()) {
+        $getRecord = User::find(Auth::user()->id);
+    } else {
+        $getRecord = 'kosong';
+    }
+
+
         return view('leanding-page.leanding-page',[
             'Antrian' => $Antrian,
             'antrianpertama' => $antrianPertama,
             'antriankedua' => $antrianKedua,
             'antrianketiga' => $antrianKetiga,
+            'getRecord' => $getRecord
         ]);
     }
 
