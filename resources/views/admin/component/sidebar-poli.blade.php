@@ -2,6 +2,7 @@
     <div class="app-brand demo">
       <a href="index.html" class="app-brand-link">
         <span class="app-brand-logo demo">
+          
           {{-- <svg
             width="25"
             viewBox="0 0 25 42"
@@ -56,6 +57,7 @@
             </g>
           </svg>
         </span>
+        <img class="logosidebar" src="{{ asset('/img/logo_si.png') }}" alt="">
         <span class="judul_dashboard">Sip<span>PH.</span></span>
       </a>
 

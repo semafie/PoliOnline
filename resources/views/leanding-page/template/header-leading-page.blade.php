@@ -17,13 +17,13 @@
         {{-- START NAVBAR --}}
         <nav>
             <div class="navbar">
-                <a class="logo" href="{{ route('home') }}">Sip<span>PH.</span></a>
+                <a class="logo" href="{{ route('home') }}"><img class="logosidebar" src="{{ asset('/img/logo_si.png') }}" alt="">Sip<span>PH.</span></a>
                 <input type="checkbox" id="check">
                 <label for="check" class="icon">
                     <i class='bx bx-menu' id="menu-icon"></i>
                     <i class='bx bx-x' id="close-icon"></i>
                 </label>
-                <ul class="links">
+                <ul class="links mb-0">
                     <li><a onclick="scrollToTargetkemabali()" class="active">Home</a></li>
                     <li><a onclick="scrollToTarget_tentang()">Tentang</a></li>
                     <li><a onclick="scrollToTarget_caramenggunakan()">Cara Menggunakan</a></li>

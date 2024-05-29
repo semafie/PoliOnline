@@ -18,7 +18,7 @@
     width: 100%;
 }
 .all-section-1 {
-    height: calc(110vh - 80px);
+    height: 100vh;
 }
 .container-section-1 {
     padding: 0 80px;
@@ -799,4 +799,10 @@
     p {
         font-size: 13px;
     }
+}
+
+.logosidebar{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }

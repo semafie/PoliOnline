@@ -8,11 +8,13 @@
 }
 .navbar {
     background-color: transparent;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 80px;
     height: 80px;
+    z-index: 1000;
 }
 
 .navbar .logo {
@@ -27,6 +29,7 @@
 }
 .navbar .links {
     display: flex;
+
     list-style: none;
     gap: 20px;
 }

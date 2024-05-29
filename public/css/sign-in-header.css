@@ -37,6 +37,11 @@ a {
     justify-content: space-between;
 }
 
+.navbar .logo{
+    display: flex;
+    align-items: center;
+}
+
 .navbar .logo a {
     color: #374987;
     font-size: 1.8rem;
@@ -149,4 +154,11 @@ a {
         font-weight: 500;
         font-size: 1.1rem;
     }
+}
+
+.logosidebar{
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }

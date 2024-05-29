@@ -357,3 +357,9 @@ body{
     border-radius: 4px;
     color: white;
 }
+
+.logosidebar{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
