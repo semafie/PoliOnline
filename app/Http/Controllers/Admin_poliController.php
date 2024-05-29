@@ -312,9 +312,9 @@ class Admin_poliController extends Controller
                         $statuslaporan->status = $request->input('select_status');
                         $status->save();
                         $statuslaporan->save();
-                        return redirect()->route('admin_poliumum_antrian')->with(Session::flash('success_edit', true));
+                        return redirect()->route('admin_polikia_antrian')->with(Session::flash('success_edit', true));
                         } else{
-                            return redirect()->route('admin_poliumum_antrian')->with(Session::flash('gagal_edit', true));
+                            return redirect()->route('admin_polikia_antrian')->with(Session::flash('gagal_edit', true));
                         }
             
                     } else if($nama_status == 'bersiap'){
@@ -323,9 +323,9 @@ class Admin_poliController extends Controller
                         $statuslaporan->status = $request->input('select_status');
                         $status->save();
                         $statuslaporan->save();
-                        return redirect()->route('admin_poliumum_antrian')->with(Session::flash('success_edit', true));
+                        return redirect()->route('admin_polikia_antrian')->with(Session::flash('success_edit', true));
                         } else{
-                            return redirect()->route('admin_poliumum_antrian')->with(Session::flash('gagal_edit', true));
+                            return redirect()->route('admin_polikia_antrian')->with(Session::flash('gagal_edit', true));
                         }
                     } else{
                         $status->status = $request->input('select_status');

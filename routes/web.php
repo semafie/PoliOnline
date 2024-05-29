@@ -58,6 +58,7 @@ Route::delete('/admin/data_pasien/delete/{id}',[PasienController::class,'delete_
 Route::get('/admin/laporan',[AdminController::class,'show_Laporan'])->name('admin_Laporan');
 
 Route::put('/admin/cetakantrians/{id}',[cetakController::class, 'cetakantrians'])->name('cetaks');
+Route::post('/admin/cetaklaporan',[cetakController::class, 'cetaklaporan'])->name('admin_cetaklaporan');
 
 });
 
@@ -73,7 +74,11 @@ Route::post('/authentication',[login_registerController::class, 'login'])->name(
 Route::get('/login',[login_registerController::class, 'show_login'])->name('sign-in');
 Route::get('/register',[login_registerController::class, 'show_register'])->name('sign-up');
 Route::post('/register',[login_registerController::class, 'register'])->name('register');
-Route::get('/cetakantrian',[cetakController::class, 'cetakantrian'])->name('cetak');
+Route::get('/cetakantrian',[cetakController::class, 'cetakantrians'])->name('cetak');
+
+Route::get('/cetaklaporans',function(){
+    return view('cetak_laporan');
+});
 
 Route::get('/awal',[cetakController::class, 'index'])->name('index');
 
