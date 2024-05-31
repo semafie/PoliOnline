@@ -18,7 +18,7 @@
     width: 100%;
 }
 .all-section-1 {
-    height: 100vh;
+    height: 110vh;
 }
 .container-section-1 {
     padding: 0 80px;
@@ -638,9 +638,9 @@
     box-shadow: 5px 5px 10px 5px rgba(228, 245, 255, 1);
 }
 .container-section-4
-    .container-no-antrian
-    .left-side-4
-    .container-box-no-antrian-1
+.container-no-antrian
+.left-side-4
+.container-box-no-antrian-1
     .inside-box-no-antrian-1 {
     margin-left: 200px;
     height: 100px;
@@ -651,6 +651,7 @@
     padding: 15px 35px 0 35px;
     background: linear-gradient(120deg, #6c4be9, #2293fa, #2fcaff);
 }
+
 .container-section-4
     .container-no-antrian
     .left-side-4

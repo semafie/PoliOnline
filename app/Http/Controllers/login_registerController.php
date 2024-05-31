@@ -47,8 +47,39 @@ class login_registerController extends Controller
     public function show_home(){
         $tanggalHariIni = Carbon::today();
     $formattedToday = $tanggalHariIni->format('Y-m-d');
-    $Antrian = AntrianModel::whereDate('tanggal', $formattedToday)
+    $Antrianumum = AntrianModel::whereDate('tanggal', $formattedToday)
     ->whereNotNull('id_dokter')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Umum');
+    })
+    ->where(function ($query) {
+        $query->where('status', 'menunggu')
+            ->orWhere(function ($query) {
+                $query->where('status', 'bersiap');
+            });
+    })
+    ->where('status', '!=', 'selesai')
+    ->with('pasien', 'dokter')
+    ->get();
+    $Antriangigi = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Gigi');
+    })
+    ->where(function ($query) {
+        $query->where('status', 'menunggu')
+            ->orWhere(function ($query) {
+                $query->where('status', 'bersiap');
+            });
+    })
+    ->where('status', '!=', 'selesai')
+    ->with('pasien', 'dokter')
+    ->get();
+    $Antriankia = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Kia');
+    })
     ->where(function ($query) {
         $query->where('status', 'menunggu')
             ->orWhere(function ($query) {
@@ -59,7 +90,7 @@ class login_registerController extends Controller
     ->with('pasien', 'dokter')
     ->get();
 
-    $antrianPertama = AntrianModel::whereDate('tanggal', $formattedToday)
+    $antrianPertamaumum = AntrianModel::whereDate('tanggal', $formattedToday)
     ->whereNotNull('id_dokter')
     ->where('status', 'masuk')
     ->whereHas('dokter', function ($query) {
@@ -69,25 +100,91 @@ class login_registerController extends Controller
     ->first();
 
 // Query kedua
-$antrianKedua = AntrianModel::whereDate('tanggal', $formattedToday)
+$antrianKeduaumum = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Umum');
+    })
+    ->orderBy('id', 'asc')
+    ->skip(1) 
+    ->first();
+
+// Query ketiga
+$antrianKetigaumum = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Umum');
+    })
+    ->orderBy('id', 'asc')
+    ->skip(2) // Melewati 2 data pertama
+    ->first();
+    $antrianPertamagigi = AntrianModel::whereDate('tanggal', $formattedToday)
     ->whereNotNull('id_dokter')
     ->where('status', 'masuk')
     ->whereHas('dokter', function ($query) {
         $query->where('nama_poli', 'Poli Gigi');
     })
     ->orderBy('id', 'asc')
-    
+    ->first();
+
+// Query kedua
+$antrianKeduagigi = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Gigi');
+    })
+    ->orderBy('id', 'asc')
+    ->skip(1)
     ->first();
 
 // Query ketiga
-$antrianKetiga = AntrianModel::whereDate('tanggal', $formattedToday)
+$antrianKetigagigi = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Gigi');
+    })
+    ->orderBy('id', 'asc')
+    ->skip(2) // Melewati 2 data pertama
+    ->first();
+
+    if (Auth::check()) {
+        $getRecord = User::find(Auth::user()->id);
+    } else {
+        $getRecord = 'kosong';
+    }
+    $antrianPertamakia = AntrianModel::whereDate('tanggal', $formattedToday)
     ->whereNotNull('id_dokter')
     ->where('status', 'masuk')
     ->whereHas('dokter', function ($query) {
         $query->where('nama_poli', 'Poli Kia');
     })
     ->orderBy('id', 'asc')
-    // ->skip(2) // Melewati 2 data pertama
+    ->first();
+
+// Query kedua
+$antrianKeduakia = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Kia');
+    })
+    ->orderBy('id', 'asc')
+    ->skip(1)
+    ->first();
+
+// Query ketiga
+$antrianKetigakia = AntrianModel::whereDate('tanggal', $formattedToday)
+    ->whereNotNull('id_dokter')
+    ->where('status', 'masuk')
+    ->whereHas('dokter', function ($query) {
+        $query->where('nama_poli', 'Poli Gigi');
+    })
+    ->orderBy('id', 'asc')
+    ->skip(2) // Melewati 2 data pertama
     ->first();
 
     if (Auth::check()) {
@@ -98,10 +195,18 @@ $antrianKetiga = AntrianModel::whereDate('tanggal', $formattedToday)
 
 
         return view('leanding-page.leanding-page',[
-            'Antrian' => $Antrian,
-            'antrianpertama' => $antrianPertama,
-            'antriankedua' => $antrianKedua,
-            'antrianketiga' => $antrianKetiga,
+            'Antrianumum' => $Antrianumum,
+            'Antriangigi' => $Antriangigi,
+            'Antriankia' => $Antriankia,
+            'antrianpertamaumum' => $antrianPertamaumum,
+            'antriankeduaumum' => $antrianKeduaumum,
+            'antrianketigaumum' => $antrianKetigaumum,
+            'antrianpertamagigi' => $antrianPertamagigi,
+            'antriankeduagigi' => $antrianKeduagigi,
+            'antrianketigagigi' => $antrianKetigagigi,
+            'antrianpertamakia' => $antrianPertamakia,
+            'antriankeduakia' => $antrianKeduakia,
+            'antrianketigakia' => $antrianKetigakia,
             'getRecord' => $getRecord
         ]);
     }

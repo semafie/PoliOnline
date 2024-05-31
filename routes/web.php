@@ -107,8 +107,8 @@ Route::group(['middleware' => 'admin_poli'], function(){
     Route::get('/admin_poli/poli_kia',[Admin_poliController::class,'show_antrianpolikia'])->name('admin_polikia_antrian');
 
     Route::put('/admin_poli/edit/{id}',[Admin_poliController::class,'edit_antrian'])->name('admin_poli_editstatus');
-    Route::get('/admin/profiles',[AdminController::class,'show_profile'])->name('admin_profile');
-    Route::put('/admin/profile/edit/{id}',[AdminController::class,'edit_profile'])->name('edit_profile');
+    Route::get('/admin_poli/profiles',[AdminController::class,'show_profile_poli'])->name('admin_profile-poli');
+    Route::put('/admin_poli/profile/edit/{id}',[AdminController::class,'edit_profile_poli'])->name('edit_profile_poli');
 });
 
 Route::get('/admin/profile',[AdminController::class,'show_profile'])->name('admin_profile');

@@ -159,19 +159,19 @@
                 </div>
                 <div class="top-right-4">
                     <div class="dropdown">
-                        <button class="btn  dropdown-toggle fs-5"
+                        {{-- <button class="btn  dropdown-toggle fs-5"
                             style="border-color: #BDBDBD; color: #787878; width: 180px" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Poli Umum
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item fs-5" style="color: #787878; width: 180px" href="#">Poli
-                                    Umum</a></li>
-                            <li><a class="dropdown-item fs-5" style="color: #787878;width: 180px" href="#">Poli
-                                    Gigi</a></li>
-                            <li><a class="dropdown-item fs-5" style="color: #787878;width: 180px" href="#">Ambil
-                                    Obat</a></li>
-                        </ul>
+                        </button> --}}
+                        <div class="">
+                            {{-- <label for="largeSelect" class="form-label">Large select</label> --}}
+                            <select id="select_poli" class="form-select form-select-lg">
+                              <option value="Poli Umum">Poli Umum</option>
+                              <option value="Poli Gigi">Poli Gigi</option>
+                              <option value="Poli Kia">Poli Kia</option>
+                            </select>
+                          </div>
                     </div>
                 </div>
             </div>
@@ -180,31 +180,81 @@
 
                     <div class="container-left-side-top-4">
                         <div class="container-box-no-antrian-1">
-                            <div class="inside-box-no-antrian-1">{{-- flex --}}{{-- space between --}}
-                                <h1>{{ $antrianpertama->no_antrian ?? '-' }}</h1>
-                                <h2>{{ $antrianpertama->status ?? 'kosong' }}</h2>
+                            <div class="inside-box-no-antrian-1 halo"  id="Poli-Umum">{{-- flex --}}{{-- space between --}}
+                                {{-- <div id="Poli-Umum" style="display: flex; width: 100%;"> --}}
+                                <h1>{{ $antrianpertamaumum->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianpertamaumum->status ?? 'kosong' }}</h2>
+                                {{-- </div> --}}
+                            </div>
+                            <div class="inside-box-no-antrian-1" id="Poli-Gigi">
+                                <h1>{{ $antrianpertamagigi->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianpertamagigi->status ?? 'kosong' }}</h2>
+                            </div>
+                            <div class="inside-box-no-antrian-1" id="Poli-Kia">
+                                <h1>{{ $antrianpertamakia->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianpertamakia->status ?? 'kosong' }}</h2>
                             </div>
                         </div>
                     </div>
                     <div class="container-left-side-bottom-4">{{-- flex --}}
                         <div class="container-box-no-antrian-2">
-                            <div class="inside-box-no-antrian-2">{{-- block --}}
-                                <h1>{{ $antriankedua->no_antrian ?? '-'}}</h1>
-                                <h2>{{ $antriankedua->status ?? 'kosong' }}</h2>
+                            <div class="inside-box-no-antrian-2" id="Poli-Umums">
+                                <h1>{{ $antriankeduaumum->no_antrian ?? '-'}}</h1>
+                                <h2>{{ $antriankeduaumum->status ?? 'kosong' }}</h2>
+                            </div>
+                            <div class="inside-box-no-antrian-2" id="Poli-Gigis">
+                                <h1>{{ $antriankeduagigi->no_antrian ?? '-'}}</h1>
+                                <h2>{{ $antriankeduagigi->status ?? 'kosong' }}</h2>
+                            </div>
+                            <div class="inside-box-no-antrian-2" id="Poli-Kias">
+                                <h1>{{ $antriankeduakia->no_antrian ?? '-'}}</h1>
+                                <h2>{{ $antriankeduakia->status ?? 'kosong' }}</h2>
                             </div>
                         </div>
                         <div class="container-box-no-antrian-2">
-                            <div class="inside-box-no-antrian-2">{{-- block --}}
-                                <h1>{{ $antrianketiga->no_antrian ?? '-' }}</h1>
-                                <h2>{{ $antrianketiga->status ?? 'kosong' }}</h2>
+                            <div class="inside-box-no-antrian-2" id="Poli-Umumss">
+                                <h1>{{ $antrianketigaumum->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianketigaumum->status ?? 'kosong' }}</h2>
+                            </div>
+                            <div class="inside-box-no-antrian-2" id="Poli-Gigiss">
+                                <h1>{{ $antrianketigagigi->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianketigagigi->status ?? 'kosong' }}</h2>
+                            </div>
+                            <div class="inside-box-no-antrian-2" id="Poli-Kiass">
+                                <h1>{{ $antrianketigakia->no_antrian ?? '-' }}</h1>
+                                <h2>{{ $antrianketigakia->status ?? 'kosong' }}</h2>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="right-side-4">
-                    @foreach ($Antrian as $item)
-                        
-                    
+                <div class="right-side-4" id="Poli-Umumsss">
+                    @foreach ($Antrianumum as $item)
+                    <div class="container-box-bersiap-dipanggil">
+                        <div class="inside-box-bersiap-dipanggil">
+                            <div class="inside-left-bersiap-dipanggil">
+                                <div class="box-icon"></div>
+                                <h2>{{ $item->status }} Dipanggil</h2>
+                            </div>
+                            <h1>{{ $item->no_antrian }}</h1>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="right-side-4" id="Poli-Gigisss">
+                    @foreach ($Antriangigi as $item)
+                    <div class="container-box-bersiap-dipanggil">
+                        <div class="inside-box-bersiap-dipanggil">
+                            <div class="inside-left-bersiap-dipanggil">
+                                <div class="box-icon"></div>
+                                <h2>{{ $item->status }} Dipanggil</h2>
+                            </div>
+                            <h1>{{ $item->no_antrian }}</h1>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                <div class="right-side-4" id="Poli-Kiasss">
+                    @foreach ($Antriankia as $item)
                     <div class="container-box-bersiap-dipanggil">
                         <div class="inside-box-bersiap-dipanggil">
                             <div class="inside-left-bersiap-dipanggil">
@@ -241,5 +291,59 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+            var selectElement = document.getElementById('select_poli');
+            function checkValue() {
+                if (selectElement.value === 'Poli Umum') {
+                    document.getElementById('Poli-Umum').style.display = 'flex';
+                    document.getElementById('Poli-Gigi').style.display = 'none';
+                    document.getElementById('Poli-Kia').style.display = 'none';
+                    document.getElementById('Poli-Umums').style.display = 'block';
+                    document.getElementById('Poli-Gigis').style.display = 'none';
+                    document.getElementById('Poli-Kias').style.display = 'none';
+                    document.getElementById('Poli-Umumss').style.display = 'block';
+                    document.getElementById('Poli-Gigiss').style.display = 'none';
+                    document.getElementById('Poli-Kiass').style.display = 'none';
+                    document.getElementById('Poli-Umumsss').style.display = 'block';
+                    document.getElementById('Poli-Gigisss').style.display = 'none';
+                    document.getElementById('Poli-Kiasss').style.display = 'none';
+                } else if(selectElement.value === 'Poli Gigi') {
+                    document.getElementById('Poli-Umum').style.display = 'none';
+                    document.getElementById('Poli-Gigi').style.display = 'flex';
+                    document.getElementById('Poli-Kia').style.display = 'none';
+                    document.getElementById('Poli-Umums').style.display = 'none';
+                    document.getElementById('Poli-Gigis').style.display = 'block';
+                    document.getElementById('Poli-Kias').style.display = 'none';
+                    document.getElementById('Poli-Umumss').style.display = 'none';
+                    document.getElementById('Poli-Gigiss').style.display = 'block';
+                    document.getElementById('Poli-Kiass').style.display = 'none';
+                    document.getElementById('Poli-Umumsss').style.display = 'none';
+                    document.getElementById('Poli-Gigisss').style.display = 'block';
+                    document.getElementById('Poli-Kiasss').style.display = 'none';
+                } else{
+                    document.getElementById('Poli-Umum').style.display = 'none';
+                    document.getElementById('Poli-Gigi').style.display = 'none';
+                    document.getElementById('Poli-Kia').style.display = 'flex';
+                    document.getElementById('Poli-Umums').style.display = 'none';
+                    document.getElementById('Poli-Gigis').style.display = 'none';
+                    document.getElementById('Poli-Kias').style.display = 'block';
+                    document.getElementById('Poli-Umumss').style.display = 'none';
+                    document.getElementById('Poli-Gigiss').style.display = 'none';
+                    document.getElementById('Poli-Kiass').style.display = 'block';
+                    document.getElementById('Poli-Umumsss').style.display = 'none';
+                    document.getElementById('Poli-Gigisss').style.display = 'none';
+                    document.getElementById('Poli-Kiasss').style.display = 'block';
+                }
+            }
+
+            // Check the initial value
+            checkValue();
+
+            // Add event listener for changes
+            selectElement.addEventListener('change', checkValue);
+        });
+</script>
     @include('leanding-page.template.footer-leading-page')
 @endsection

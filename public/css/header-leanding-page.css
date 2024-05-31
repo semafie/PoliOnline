@@ -106,6 +106,7 @@
 nav.active{
     position: fixed;
     background: linear-gradient(45deg, rgba(125, 58, 228, 0.8), rgba(10, 169, 255, 0.8), rgba(82, 234, 255, 0.8));
+    backdrop-filter: blur(3px);
     z-index: 1000;
     width: 80%;
     margin-left: 10%;

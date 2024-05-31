@@ -112,7 +112,7 @@
                              
                             @endphp --}}
                             @foreach ($Dokter as $dokter)
-                            @if ($dokter->nama_poli === $poli )
+                            @if ($dokter->nama_poli ===   $poli )
                                 <option value="{{ $dokter->id }}">{{ $dokter->nama_dokter }} </option> 
                                 
                             @endif

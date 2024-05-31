@@ -87,6 +87,12 @@ class AdminController extends Controller
          'getRecord' => User::find(Auth::user()->id)]);
     }
 
+    public function show_profile_poli(){
+        return view('admin.layout.profile-poli',
+        ['title' => 'Data Pasien',
+         'getRecord' => User::find(Auth::user()->id)]);
+    }
+
     public function show_Laporan(){
         $Antrian = AntrianModel::where('status', 'selesai')
                        ->with('pasien', 'dokter')
@@ -127,5 +133,28 @@ class AdminController extends Controller
         $user->save();
 
         return redirect()->route('admin_profile')->with(Session::flash('success_edit', true));
+    }
+    
+    public function edit_profile_poli(Request $request , $id){
+        $user = User::findorFAil($id);
+
+        // $request->validate([
+        //     'image' => 'image|file|max:5048',
+        // ]);
+        $nama = $request->file('image')->getClientOriginalName();
+        $request->file('image')->storeAs('img', $nama);
+        // var_dump($imagename);
+
+        
+
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        
+
+        $user->image = $nama;
+        $user->no_telp = $request->input('no_telp');
+        $user->save();
+
+        return redirect()->route('admin_profile-poli')->with(Session::flash('success_edit', true));
     }
 }
