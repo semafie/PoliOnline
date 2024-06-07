@@ -83,13 +83,13 @@ class AdminController extends Controller
 
     public function show_profile(){
         return view('admin.layout.profile',
-        ['title' => 'Data Pasien',
+        ['title' => 'Data Admin',
          'getRecord' => User::find(Auth::user()->id)]);
     }
 
     public function show_profile_poli(){
         return view('admin.layout.profile-poli',
-        ['title' => 'Data Pasien',
+        ['title' => 'Data Admin Poli',
          'getRecord' => User::find(Auth::user()->id)]);
     }
 
