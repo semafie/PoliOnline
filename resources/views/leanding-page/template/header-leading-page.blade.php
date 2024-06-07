@@ -16,7 +16,7 @@
     <body>
         {{-- START NAVBAR --}}
         <nav>
-            <div class="navbar">
+            <div class="navbar" id="navbar">
                 <a class="logo" href="{{ route('home') }}"><img class="logosidebar" src="{{ asset('/img/logo_si.png') }}" alt="">Sip<span>PH.</span></a>
                 <input type="checkbox" id="check">
                 <label for="check" class="icon">
@@ -72,7 +72,7 @@
         @yield('lihat-antrian') --}}
 
         <script>window.addEventListener("scroll", function() {
-            var navbar = document.querySelector("nav");
+            var navbar = document.getElementById("navbar");
             var scroll = window.scrollY;
             navbar.classList.toggle("active", scroll > 1);
         });

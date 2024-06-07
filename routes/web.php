@@ -76,6 +76,7 @@ Route::get('/login',[login_registerController::class, 'show_login'])->name('sign
 Route::get('/register',[login_registerController::class, 'show_register'])->name('sign-up');
 Route::post('/register',[login_registerController::class, 'register'])->name('register');
 Route::get('/cetakantrian',[cetakController::class, 'cetakantrians'])->name('cetak');
+Route::get('/cetaklaaa',[cetakController::class, 'cetaklaporans'])->name('cetak');
 
 Route::get('/cetaklaporans',function(){
     return view('cetak_laporan');

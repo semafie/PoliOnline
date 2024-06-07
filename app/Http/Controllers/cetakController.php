@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\AntrianModel;
-
 use PDF;
+
 
 
 class cetakController extends Controller
@@ -46,7 +46,7 @@ class cetakController extends Controller
         // $Antrian = AntrianModel::where('id', $id)->with('pasien', 'dokter')->get();
         // $user = User::get();
 
-        $pdf = PDF::loadview('cetak_laporan')
+        $pdf = PDF::loadview('pdfff')
                 ->setPaper('A4', 'portrait');
                 
         return $pdf->stream('nota_antrian.pdf');

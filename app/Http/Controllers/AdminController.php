@@ -95,6 +95,7 @@ class AdminController extends Controller
 
     public function show_Laporan(){
         $Antrian = AntrianModel::where('status', 'selesai')
+                        ->whereNotNull('id_dokter')
                        ->with('pasien', 'dokter')
                        ->get();
         

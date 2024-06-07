@@ -10,11 +10,15 @@ use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
     public function show_antrian(){
+
+
         $tanggalHariIni = Carbon::today();
+        
         $id_user = User::find(Auth::user()->id);
         $Antrianmu = AntrianModel::whereDate('tanggal', $tanggalHariIni)
                     ->whereHas('pasien', function ($query) use ($id_user) {
